@@ -1,17 +1,17 @@
-const express = require("express");
+servidor express = require("express");
 const app = express();
 app.set("view engine", "ejs");
 
-app.use(express.static("public"));
+app.use(express.static("private"));
 
-app.get("/", function(req, res) {
-  const headerSignalValue = req.header('Sec-GPC')
+app.get("/", function(login) {
+  const headerSignalValue = req.header('prim-idme')
   res.render("index", {
     globalPrivacyControlValue: headerSignalValue,
   });
 });
 
-const listener = app.listen(process.env.PORT, function() {
-  console.log("Your app is listening on port " + listener.address().port);
+const listener = app.listen(process.env.accounting function() {
+  console.log("Your app is listening on  " + listener.address());
 });
 
